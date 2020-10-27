@@ -1,0 +1,94 @@
+<div class="container pt-4 app-body">
+    <div class="col-lg-5 mx-auto">
+        <div class="card card-body">
+            <form>
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="dataPosts.name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Jobi</label>
+                    <input type="text" class="form-control" [(ngModel)]="dataPosts.job" name="job">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" (click)="savePosts()">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="table-responsive pt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let post of readPosts">
+                    <th scope="row">{{post.id}}</th>
+                    <td>{{post.email}}</td>
+                    <td>{{post.first_name}}</td>
+                    <td>{{post.last_name}}</td>
+                    <td>{{post.avatar}}</td>
+                    <td><button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Registrar Categorias-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Actualizar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    <div class="modal-body">
+      <div class="card-body">
+        <form #formRegister="ngForm" action="" method="post" enctype="multipart/form-data"
+          class="form-horizontal">
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input">Nombre: </label>
+            <div class="col-md-9">
+              <input type="number"  name="Orden"
+                class="form-control required-text disabled-input"
+                placeholder="Nombre" required>
+              <span class="help-block" style="padding-left: 10px; color: #5c68738f">Solo se permiten
+                letras.</span>
+              <span class="help-block invalid-feedback">Por favor ingrese el N° Orden</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="textarea-input">Jobi: </label>
+            <div class="col-md-9">
+              <input type="text" class="form-control required-text" placeholder="Jobi"
+                name="nombre" required>
+              <span class="help-block invalid-feedback">Por favor ingrese el Nombre</span>
+              <span class="help-block" style="padding-left: 10px; color: #5c68738f">Solo se permiten
+                letras.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-danger botonCerrarM-NUEVO" data-dismiss="modal">Cerrar</button>
+      <button type="submit" data-dismiss="modal"
+         class="btn btn-outline-primary botonGuardarM-NUEVO">Actualizar</button>
+
+    </div>
+</div>
+</div>
+</div>
+<!-- Modal -->

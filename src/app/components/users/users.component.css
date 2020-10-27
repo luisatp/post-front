@@ -1,0 +1,34 @@
+.app-body{  
+    background-image: url("../../../assets/img/background/fondo.jpg");
+    background-size: cover;
+    /*margin-top: 0px;
+    height: 700px;*/
+    width: 100%;
+    height: 600px;
+    margin: 0;
+}
+
+@media (min-width: 1200px){
+    .app-body {
+        max-width: 100%;
+    }
+}
+
+.botonLogin{
+     
+    background-color: #EC4722 !important;
+    border-color: #EC4722 !important;
+    color: white !important;
+    border-radius: 3px;
+    width: 90px;
+    height: 40px;
+    border: 1px solid ;
+  
+  }
+  
+  .botonLogin:hover{
+    background-color: white !important;
+    border-color: #EC4722 !important;
+    color: #EC4722 !important;
+    border: 1px solid !important;
+  } 

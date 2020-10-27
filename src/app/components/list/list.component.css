@@ -1,0 +1,20 @@
+.app-body{  
+    background-image: url("../../../assets/img/background/fondo.jpg");
+    background-size: cover;
+    /*margin-top: 0px;
+    height: 700px;*/
+    width: 100%;
+    height: 777px;
+    margin: 0;
+}
+th{
+    color: #ffffff;
+}
+td{
+    color: #ffffff;
+}
+@media (min-width: 1200px){
+    .app-body {
+        max-width: 100%;
+    }
+}
